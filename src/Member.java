@@ -2,7 +2,7 @@ public abstract class Member {
     private final String id;
     private final String name;
 
-    Member(String id, String name){
+    protected Member(String id, String name){
         this.id = id;
         this.name=name;
     }
