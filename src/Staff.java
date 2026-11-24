@@ -1,5 +1,5 @@
 public final class Staff extends Member {
-        Staff(String id, String name){
+        public Staff(String id, String name){
             super(id,name);
         }
 
