@@ -1,0 +1,18 @@
+public final class Magazine extends LibraryItem implements Borrowable {
+    private final String issue;
+
+    Magazine(String id,String title,String author){
+        super(id,title);
+        this.issue = author;
+    }
+
+    public String getAuthor(){return issue;}
+
+    @Override 
+    public String getType(){return "MAGAZINE";}
+
+    @Override 
+    public int getFinePerDay(){
+        return 1;
+    }
+}
