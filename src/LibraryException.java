@@ -1,6 +1,6 @@
 public class LibraryException extends Exception {
-    LibraryException(String message){
+    public LibraryException(String message){
         super(message);
     } 
-    
+
 }
