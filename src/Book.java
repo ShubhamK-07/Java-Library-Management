@@ -1,7 +1,7 @@
 public final class Book extends LibraryItem implements Borrowable {
     private final String author;
 
-    Book(String id,String title,String author){
+    public Book(String id,String title,String author){
         super(id,title);
         this.author = author;
     }
