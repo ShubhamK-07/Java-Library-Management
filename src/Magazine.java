@@ -1,7 +1,7 @@
 public final class Magazine extends LibraryItem implements Borrowable {
     private final String issue;
 
-    Magazine(String id,String title,String author){
+    public Magazine(String id,String title,String author){
         super(id,title);
         this.issue = author;
     }
