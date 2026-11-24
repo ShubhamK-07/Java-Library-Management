@@ -14,6 +14,10 @@ public abstract class Member {
 
     public abstract int getLoanPeriod();
 
+    public boolean hasReachedLimit(int loanCount){
+        return loanCount >= getMaxItems();
+    }
+
     public abstract String getType();
 
 }
