@@ -159,9 +159,9 @@ public final class Library {
     }
 
     public int returnItem(String itemId) throws LibraryException{
-        Loan l = loans.remove(itemId);
+        Loan l = loans.get(itemId);
         if(l==null){
-            if(!loans.containsKey(itemId)){
+            if(!items.containsKey(itemId)){
                 throw new ItemNotFoundException(itemId);
             }
 
@@ -169,6 +169,7 @@ public final class Library {
         }
 
         int fine = l.fine(currentDay);
+        loans.remove(itemId);
 
         Queue<Member> line = reservations.get(itemId);
 
