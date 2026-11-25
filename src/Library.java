@@ -70,7 +70,7 @@ public final class Library {
         Loan l = loans.get(item.getId());
 
         if(l==null){return "AVAILABLE";}
-        return "ON_LOAN| "+l.getMember().getId();
+        return "ON_LOAN|"+l.getMember().getId();
     }
 
     public List<LibraryItem> getItems(){
