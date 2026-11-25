@@ -106,11 +106,12 @@ public final class Library {
             throw new ReservationNotAllowedException(memberId+" already has "+itemId);
         }
 
-        if(!reservations.containsKey(itemId)){
-            reservations.put(itemId, new ArrayDeque<>());
-        }
-
         Queue<Member> line = reservations.get(itemId);
+
+        if(line==null){
+            line = new LinkedList<>();
+            reservations.put(itemId,line);
+        }
 
         for(Member in_line: line){
             if(in_line.getId().equals(memberId)){
