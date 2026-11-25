@@ -9,7 +9,7 @@ public final class ReferenceBook extends LibraryItem {
     public String getAuthor(){return author;}
 
     @Override 
-    public String getType(){return "REFERENCe";}
+    public String getType(){return "REFERENCE";}
 
 
 }
