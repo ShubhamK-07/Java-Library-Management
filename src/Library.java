@@ -27,7 +27,7 @@ public final class Library {
         String p = text.toLowerCase();
         List<LibraryItem> f  = new ArrayList<>();
         for(LibraryItem i : items.values()){
-            if(i.getTitle().toLowerCase().contains(text)){f.add(i);}
+            if(i.getTitle().toLowerCase().contains(p)){f.add(i);}
         }
 
         f.sort(Comparator.comparing(LibraryItem::getTitle).thenComparing(LibraryItem::getId));
@@ -161,7 +161,7 @@ public final class Library {
         Loan l = loans.remove(itemId);
         if(l==null){
             if(!loans.containsKey(itemId)){
-                throw new ItemNotFoundException(itemId)
+                throw new ItemNotFoundException(itemId);
             }
 
             throw new ItemNotOnLoanException(itemId);
