@@ -24,10 +24,10 @@ public final class Library {
     }
 
     public List<LibraryItem> search(String text){
-        String p = text.toLowerCase();
+        String p = text.toUpperCase();
         List<LibraryItem> f  = new ArrayList<>();
         for(LibraryItem i : items.values()){
-            if(i.getTitle().toLowerCase().contains(p)){f.add(i);}
+            if(i.getTitle().toUpperCase().contains(p)){f.add(i);}
         }
 
         f.sort(Comparator.comparing(LibraryItem::getTitle).thenComparing(LibraryItem::getId));
