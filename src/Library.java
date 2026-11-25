@@ -109,7 +109,7 @@ public final class Library {
         Queue<Member> line = reservations.get(itemId);
 
         if(line==null){
-            line = new LinkedList<>();
+            line = new ArrayDeque<>();
             reservations.put(itemId,line);
         }
 
