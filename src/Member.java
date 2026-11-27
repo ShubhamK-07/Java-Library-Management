@@ -18,6 +18,5 @@ public abstract class Member {
         return loanCount >= getMaxItems();
     }
 
-    public abstract String getType();
 
 }
