@@ -154,5 +154,6 @@ public final class Main {
                 System.out.println("ERROR "+e.getMessage());
             }
         }
+        sc.close();
     }
 }
