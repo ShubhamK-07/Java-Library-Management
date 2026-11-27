@@ -7,6 +7,4 @@ public final class Student extends Member {
     @Override 
     public int getLoanPeriod(){return 14;}
 
-    @Override 
-    public  String getType(){return "STUDENT";}
 }
