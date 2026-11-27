@@ -1,0 +1,19 @@
+OK
+OK
+OK
+OK
+OK
+OK
+OK due on day 14
+OK due on day 14
+OK due on day 14
+OK due on day 21
+OK reserved
+OK fine 0
+OK fine 0
+OK due on day 14
+OK fine 0
+B1|BOOK|AVAILABLE
+B2|BOOK|ON_LOAN|S1
+B3|BOOK|ON_LOAN|S1
+B4|BOOK|AVAILABLE

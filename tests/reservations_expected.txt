@@ -1,0 +1,34 @@
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK due on day 14
+OK due on day 14
+OK due on day 14
+OK due on day 21
+OK reserved
+ERROR S1 already reserved B4
+OK reserved
+OK fine 0, issued to F1 due on day 30
+B1|BOOK|ON_LOAN|S1
+B2|BOOK|ON_LOAN|S1
+B3|BOOK|ON_LOAN|S1
+B4|BOOK|ON_LOAN|F1
+OK fine 0
+B1|BOOK|ON_LOAN|S1
+B2|BOOK|ON_LOAN|S1
+B3|BOOK|ON_LOAN|S1
+B4|BOOK|AVAILABLE
+OK fine 0
+OK due on day 21
+OK fine 0, issued to S1 due on day 14
+B1|BOOK|AVAILABLE
+B2|BOOK|ON_LOAN|S1
+B3|BOOK|ON_LOAN|S1
+B4|BOOK|ON_LOAN|S1
+B2|Two|14
+B3|Three|14
+B4|Target|14

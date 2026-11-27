@@ -1,0 +1,25 @@
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK due on day 14
+OK due on day 14
+OK due on day 30
+OK today is day 16
+B2|BOOK|Alpha Algorithms
+M1|MAGAZINE|Alpha Magazine
+B3|BOOK|Alpha Physics
+NONE
+B1|Beta|14
+M1|Alpha Magazine|14
+B2|Alpha Algorithms|30
+B1|S1|2|4
+M1|S1|2|2
+B1|BOOK|ON_LOAN|S1
+B2|BOOK|ON_LOAN|F1
+B3|BOOK|AVAILABLE
+M1|MAGAZINE|ON_LOAN|S1
+R1|REFERENCE|NOT_BORROWABLE

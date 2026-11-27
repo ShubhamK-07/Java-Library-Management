@@ -1,0 +1,15 @@
+OK
+OK
+OK
+OK
+OK due on day 14
+OK today is day 14
+NONE
+OK fine 0
+OK due on day 28
+OK today is day 29
+M1|S1|1|1
+OK fine 1
+B1|BOOK|AVAILABLE
+M1|MAGAZINE|AVAILABLE
+R1|REFERENCE|NOT_BORROWABLE
