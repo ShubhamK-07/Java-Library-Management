@@ -9,6 +9,4 @@ public final class Staff extends Member {
         @Override 
         public int getLoanPeriod(){return 21;   }
 
-        @Override 
-        public String getType(){return "STAFF";}
 }
