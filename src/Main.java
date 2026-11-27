@@ -2,13 +2,13 @@ import java.util.*;
 
 public final class Main {
 
-    static void requireFields(String[] line,int n) throws InvalidInputException{
+    private static void requireFields(String[] line,int n) throws InvalidInputException{
         if(line.length!=n){
             throw new InvalidInputException("error");
         }
     }
 
-    static int parseDays(String s) throws InvalidInputException{
+    private static int parseDays(String s) throws InvalidInputException{
         try{
             return Integer.parseInt(s);
         }
@@ -18,7 +18,7 @@ public final class Main {
     }
 
 
-    static Member createMember(String id,String name, String type) throws InvalidInputException{
+    private static Member createMember(String id,String name, String type) throws InvalidInputException{
         if(type.equals("STUDENT")){
             return new Student(id,name);
         }
@@ -33,7 +33,7 @@ public final class Main {
         }
     }
 
-    static List<String> processCommand(Library library, String line) throws LibraryException{
+    private static List<String> processCommand(Library library, String line) throws LibraryException{
         String p[] = line.split("\\|",-1);
         String cmd = p[0];
         List<String> result = new ArrayList<>();
@@ -108,8 +108,8 @@ public final class Main {
 
             case "LOANS":{
                 requireFields(p, 2);
-                result.addAll(library.loansOf(p[1]).stream().sorted(Comparator.comparing(Loan::getDueDay).thenComparing(Loan::getItemId))
-                .map(b -> b.getItemId()+"|"+((LibraryItem)b.getItem()).getTitle()+"|"+b.getDueDay()).toList());
+                result.addAll(library.loansOf(p[1]).stream().sorted(Comparator.comparing(Loan::getDueDay).thenComparing( l -> l.getItem().getId()))
+                .map(b -> b.getItem().getId()+"|"+((LibraryItem)b.getItem()).getTitle()+"|"+b.getDueDay()).toList());
                 break;
 
             }
@@ -117,8 +117,8 @@ public final class Main {
             case "OVERDUE":{
                 requireFields(p, 1);
                 int today = library.getCurrentDay();
-                result.addAll(library.overdue().stream().sorted(Comparator.comparing((Loan l) -> l.daysLate(today)).reversed().thenComparing(Loan::getItemId))
-                    .map(l -> l.getItemId()+"|"+l.getMember().getId()+"|"+l.daysLate(today)+"|"+l.fine(today)).toList());
+                result.addAll(library.overdue().stream().sorted(Comparator.comparing((Loan l) -> l.daysLate(today)).reversed().thenComparing(l -> l.getItem().getId()))
+                    .map(l -> l.getItem().getId()+"|"+l.getMember().getId()+"|"+l.daysLate(today)+"|"+l.fine(today)).toList());
                 break;
             }
 
