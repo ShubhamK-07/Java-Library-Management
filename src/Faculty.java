@@ -9,6 +9,4 @@ public final class Faculty extends Member {
         @Override 
         public int getLoanPeriod(){return 30;   }
 
-        @Override 
-        public String getType(){return "FACULTY";}
 }
