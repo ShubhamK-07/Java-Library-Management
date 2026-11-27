@@ -127,9 +127,37 @@ Fields are separated by `|`. Reports with no matching rows print `NONE`.
 │   ├── ItemNotOnLoanException.java            # Returning an item that is not on loan
 │   └── ReservationNotAllowedException.java    # Invalid reservation attempt
 │
+├── tests/
+│   ├── normal.txt                             # Sample session & standard borrow/return workflow
+│   ├── normal_expected.txt
+│   ├── errors.txt                             # Error handling & member borrow limits
+│   ├── errors_expected.txt
+│   ├── reports.txt                            # Empty reports, case-insensitive search & sorting
+│   ├── reports_expected.txt
+│   ├── reservations.txt                       # Reservation rules, FIFO queue & skip-at-limit
+│   ├── reservations_expected.txt
+│   ├── direct_borrow.txt                      # Direct borrow cleanup for queued reservations
+│   └── direct_borrow_expected.txt
+│
+├── run_tests.sh                               # Shell script to compile and run all test cases
 ├── README.md                                  # Project documentation
 └── UML.pdf                                    # Class diagram
 ```
+
+## Testing
+
+Run the automated test suite from the project root:
+```bash
+sh run_tests.sh
+```
+
+| Test File | Coverage |
+|---|---|
+| `tests/normal.txt` | Normal session: adding items/members, borrowing, returning, fines, and reports |
+| `tests/errors.txt` | All Section 7 error cases and `STUDENT` / `STAFF` / `FACULTY` borrow limits |
+| `tests/reports.txt` | Empty reports (`NONE`), case-insensitive `SEARCH`, sort orders, and ID tie-breakers |
+| `tests/reservations.txt` | Reservation errors, FIFO auto-issue on `RETURN`, and skipping members at their limit |
+| `tests/direct_borrow.txt` | Queue cleanup when a previously skipped member borrows an available item directly |
 
 ## Example
 
