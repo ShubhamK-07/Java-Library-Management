@@ -152,6 +152,12 @@ public final class Library {
             throw new BorrowLimitExceededException(memberId, mem.getMaxItems());
         }
 
+        Queue<Member> line = reservations.get(itemId);
+        if(line!=null){
+            line.remove(mem);
+            if(line.isEmpty()){reservations.remove(itemId);}
+        }
+
         Loan l = new Loan((Borrowable)item, mem, currentDay);
         loans.put(itemId,l);
         return l;
