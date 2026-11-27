@@ -29,5 +29,4 @@ public class Loan {
         return daysLate(today)*item.getFinePerDay();
     }
 
-    public String getItemId(){return ((LibraryItem)item).getId();}
 }
