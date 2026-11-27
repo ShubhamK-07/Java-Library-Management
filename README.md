@@ -1,4 +1,4 @@
-# Capstone Project — Library Management System
+# Library Management System
 
 > **Name:** Shubham Kuvad  
 > **Roll No:** `BC2025052`  
